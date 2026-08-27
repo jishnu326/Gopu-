@@ -986,5 +986,6 @@ body {
 }
 .title {
   left: 50% !important;
+  top: 35% !important;
   transform: translateX(-50%) !important;
 }
