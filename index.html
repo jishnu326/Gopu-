@@ -306,9 +306,20 @@
     </div>
   </div>
 
-  <script  src="./script.js"></script>
-<audio autoplay loop>
+  <audio id="bgMusic" loop>
   <source src="song.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+  const music = document.getElementById("bgMusic");
+
+  function startMusic() {
+    music.play().catch(error => {
+      console.log("Music could not start:", error);
+    });
+  }
+
+  document.addEventListener("touchstart", startMusic, { once: true });
+</script>
 </body>
 </html>
